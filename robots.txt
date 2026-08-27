@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://techniqus.com/sitemap.xml

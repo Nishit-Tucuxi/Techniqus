@@ -1,0 +1,55 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of cables and connectivity adapters">
+  <defs>
+    <linearGradient id="cbGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3C5"/>
+      <stop offset="100%" stop-color="#14336B"/>
+    </linearGradient>
+    <style>
+      .sway { animation: sway 5s ease-in-out infinite; transform-origin: center; }
+      .sway2 { animation: sway 6s ease-in-out infinite; animation-delay: -2s; transform-origin: center; }
+      .flow2 { stroke-dasharray: 7 9; animation: flow2 1.8s linear infinite; }
+      @keyframes sway { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(3deg); } }
+      @keyframes flow2 { to { stroke-dashoffset: -32; } }
+      @media (prefers-reduced-motion: reduce) { .sway, .sway2, .flow2 { animation: none; } }
+    </style>
+  </defs>
+
+  <ellipse cx="200" cy="250" rx="140" ry="16" fill="#0B2044" opacity="0.06"/>
+  <rect x="30" y="35" width="340" height="190" rx="20" fill="#EEF4FA"/>
+
+  <!-- Coiled cable -->
+  <g class="sway">
+    <path class="flow2" d="M90 200 C 60 170, 60 120, 100 100 C 140 80, 170 110, 150 140 C 132 166, 100 150, 112 128 C 122 110, 146 118, 140 136"
+          fill="none" stroke="url(#cbGrad1)" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <!-- USB-C connector head -->
+  <g class="sway2">
+    <rect x="185" y="120" width="46" height="26" rx="6" fill="#14336B"/>
+    <rect x="225" y="128" width="14" height="10" rx="2" fill="#22D3C5"/>
+  </g>
+  <path class="flow2" d="M150 133 C 165 130, 172 128, 185 130" fill="none" stroke="#14B8AA" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Adapter block -->
+  <g class="sway">
+    <rect x="255" y="105" width="60" height="56" rx="10" fill="#ffffff" stroke="#14336B" stroke-width="2"/>
+    <circle cx="270" cy="123" r="4" fill="#FFB648"/>
+    <circle cx="286" cy="123" r="4" fill="#22D3C5"/>
+    <circle cx="302" cy="123" r="4" fill="#FF6B5B"/>
+    <rect x="264" y="140" width="42" height="8" rx="4" fill="#EEF4FA"/>
+  </g>
+  <path class="flow2" d="M239 133 C 246 130, 250 128, 255 128" fill="none" stroke="#22D3C5" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Power plug -->
+  <g class="sway2">
+    <rect x="290" y="185" width="40" height="24" rx="6" fill="#0B2044"/>
+    <rect x="298" y="209" width="6" height="14" fill="#0B2044"/>
+    <rect x="316" y="209" width="6" height="14" fill="#0B2044"/>
+  </g>
+  <path class="flow2" d="M285 145 C 300 160, 305 172, 305 185" fill="none" stroke="#FFB648" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Small dongle -->
+  <g class="sway">
+    <rect x="95" y="185" width="44" height="22" rx="6" fill="url(#cbGrad1)"/>
+  </g>
+</svg>

@@ -1,0 +1,55 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of wireless earbuds and personal tech accessories">
+  <defs>
+    <linearGradient id="auGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3C5"/>
+      <stop offset="100%" stop-color="#14336B"/>
+    </linearGradient>
+    <style>
+      .drift { animation: drift 4.8s ease-in-out infinite; transform-origin: center; }
+      .drift2 { animation: drift 5.6s ease-in-out infinite; animation-delay: -1.8s; transform-origin: center; }
+      .ring { animation: ring 2.6s ease-out infinite; transform-origin: center; }
+      .ring2 { animation: ring 2.6s ease-out infinite; animation-delay: -1.3s; transform-origin: center; }
+      @keyframes drift { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-8px) rotate(2deg); } }
+      @keyframes ring { 0% { opacity: 0.55; transform: scale(0.6); } 100% { opacity: 0; transform: scale(1.6); } }
+      @media (prefers-reduced-motion: reduce) { .drift, .drift2, .ring, .ring2 { animation: none; } }
+    </style>
+  </defs>
+
+  <ellipse cx="200" cy="250" rx="140" ry="16" fill="#0B2044" opacity="0.06"/>
+  <rect x="30" y="35" width="340" height="190" rx="20" fill="#EEF4FA"/>
+
+  <!-- Charging case -->
+  <g class="drift">
+    <rect x="150" y="150" width="90" height="60" rx="16" fill="url(#auGrad1)"/>
+    <rect x="150" y="150" width="90" height="26" rx="14" fill="#ffffff" fill-opacity="0.18"/>
+    <circle cx="195" cy="180" r="6" fill="#ffffff" fill-opacity="0.6"/>
+  </g>
+
+  <!-- Earbud left -->
+  <g class="drift2">
+    <circle cx="130" cy="120" r="16" fill="#ffffff" stroke="#14336B" stroke-width="2"/>
+    <rect x="122" y="132" width="9" height="20" rx="4" fill="#14336B"/>
+    <circle class="ring" cx="130" cy="120" r="18" fill="none" stroke="#22D3C5" stroke-width="2"/>
+  </g>
+
+  <!-- Earbud right -->
+  <g class="drift">
+    <circle cx="270" cy="110" r="16" fill="#ffffff" stroke="#14336B" stroke-width="2"/>
+    <rect x="262" y="122" width="9" height="20" rx="4" fill="#14336B"/>
+    <circle class="ring2" cx="270" cy="110" r="18" fill="none" stroke="#FFB648" stroke-width="2"/>
+  </g>
+
+  <!-- Smartwatch -->
+  <g class="drift2">
+    <rect x="80" y="180" width="40" height="46" rx="10" fill="#14336B"/>
+    <rect x="86" y="188" width="28" height="30" rx="4" fill="#22D3C5"/>
+    <rect x="90" y="168" width="20" height="12" rx="3" fill="#0B2044"/>
+    <rect x="90" y="226" width="20" height="12" rx="3" fill="#0B2044"/>
+  </g>
+
+  <!-- Small charger plug -->
+  <g class="drift">
+    <rect x="280" y="185" width="34" height="20" rx="5" fill="#0B2044"/>
+    <circle cx="297" cy="195" r="4" fill="#22D3C5"/>
+  </g>
+</svg>

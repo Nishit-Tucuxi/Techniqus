@@ -1,0 +1,65 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a docking station and USB hub with connected cables">
+  <defs>
+    <linearGradient id="dkGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3C5"/>
+      <stop offset="100%" stop-color="#14336B"/>
+    </linearGradient>
+    <style>
+      .bob { animation: bob 4.2s ease-in-out infinite; transform-origin: center; }
+      .pulse-port { animation: pulsePort 2s ease-in-out infinite; }
+      .pulse-port:nth-child(2) { animation-delay: -0.3s; }
+      .pulse-port:nth-child(3) { animation-delay: -0.6s; }
+      .pulse-port:nth-child(4) { animation-delay: -0.9s; }
+      .flow { stroke-dasharray: 6 8; animation: flow 1.6s linear infinite; }
+      @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+      @keyframes pulsePort { 0%,100% { opacity: 0.35; } 50% { opacity: 1; } }
+      @keyframes flow { to { stroke-dashoffset: -28; } }
+      @media (prefers-reduced-motion: reduce) { .bob, .pulse-port, .flow { animation: none; } }
+    </style>
+  </defs>
+
+  <ellipse cx="200" cy="252" rx="140" ry="16" fill="#0B2044" opacity="0.06"/>
+  <rect x="30" y="35" width="340" height="190" rx="20" fill="#EEF4FA"/>
+
+  <!-- Laptop -->
+  <g class="bob">
+    <rect x="70" y="80" width="130" height="86" rx="8" fill="#0B2044"/>
+    <rect x="78" y="88" width="114" height="66" rx="2" fill="#14336B"/>
+    <rect x="60" y="166" width="150" height="10" rx="4" fill="#14336B"/>
+  </g>
+
+  <!-- Dock body -->
+  <g>
+    <rect x="215" y="140" width="120" height="42" rx="10" fill="url(#dkGrad1)"/>
+    <circle class="pulse-port" cx="232" cy="161" r="4" fill="#ffffff"/>
+    <circle class="pulse-port" cx="250" cy="161" r="4" fill="#ffffff"/>
+    <circle class="pulse-port" cx="268" cy="161" r="4" fill="#ffffff"/>
+    <circle class="pulse-port" cx="286" cy="161" r="4" fill="#ffffff"/>
+    <rect x="300" y="152" width="24" height="18" rx="3" fill="#0B2044" fill-opacity="0.3"/>
+  </g>
+
+  <!-- Cable from laptop to dock -->
+  <path class="flow" d="M200 150 C 208 150, 208 161, 215 161" fill="none" stroke="#14B8AA" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Peripheral cables fanning out from dock -->
+  <path class="flow" d="M335 150 C 355 145, 365 120, 360 100" fill="none" stroke="#FFB648" stroke-width="3" stroke-linecap="round"/>
+  <path class="flow" d="M335 165 C 358 168, 372 185, 366 205" fill="none" stroke="#22D3C5" stroke-width="3" stroke-linecap="round"/>
+  <path class="flow" d="M215 175 C 200 190, 175 195, 155 205" fill="none" stroke="#FF6B5B" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- External monitor -->
+  <g class="bob" style="animation-delay:-1.4s">
+    <rect x="330" y="70" width="46" height="32" rx="4" fill="#14336B"/>
+    <rect x="335" y="75" width="36" height="22" rx="2" fill="#22D3C5"/>
+  </g>
+
+  <!-- External drive -->
+  <g class="bob" style="animation-delay:-2.4s">
+    <rect x="335" y="195" width="42" height="26" rx="6" fill="#0B2044"/>
+    <circle cx="356" cy="208" r="4" fill="#22D3C5"/>
+  </g>
+
+  <!-- Small connector -->
+  <g class="bob" style="animation-delay:-0.6s">
+    <rect x="125" y="200" width="40" height="20" rx="5" fill="#14336B"/>
+  </g>
+</svg>

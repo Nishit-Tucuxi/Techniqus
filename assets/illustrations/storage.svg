@@ -1,0 +1,55 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of SSD and USB storage accessories">
+  <defs>
+    <linearGradient id="stGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3C5"/>
+      <stop offset="100%" stop-color="#14336B"/>
+    </linearGradient>
+    <linearGradient id="stGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14B8AA"/>
+      <stop offset="100%" stop-color="#0B2044"/>
+    </linearGradient>
+    <style>
+      .float-a { animation: floatA 4.5s ease-in-out infinite; transform-origin: center; }
+      .float-b { animation: floatB 5.5s ease-in-out infinite; transform-origin: center; }
+      .float-c { animation: floatA 5s ease-in-out infinite; animation-delay: -2s; transform-origin: center; }
+      .blink { animation: blink 2.4s ease-in-out infinite; }
+      .spin-slow { animation: spinSlow 14s linear infinite; transform-origin: 118px 150px; }
+      @keyframes floatA { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      @keyframes floatB { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-5px) rotate(-2deg); } }
+      @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+      @keyframes spinSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) { .float-a, .float-b, .float-c, .blink, .spin-slow { animation: none; } }
+    </style>
+  </defs>
+
+  <ellipse cx="200" cy="248" rx="150" ry="18" fill="#0B2044" opacity="0.06"/>
+
+  <!-- Backdrop panel -->
+  <rect x="40" y="40" width="320" height="180" rx="20" fill="#EEF4FA"/>
+  <circle class="spin-slow" cx="118" cy="150" r="46" fill="none" stroke="#CFE9E6" stroke-width="2" stroke-dasharray="5 7"/>
+
+  <!-- Large SSD card -->
+  <g class="float-a">
+    <rect x="150" y="95" width="150" height="95" rx="12" fill="url(#stGrad1)"/>
+    <rect x="150" y="95" width="150" height="95" rx="12" fill="none" stroke="#0B2044" stroke-opacity="0.08"/>
+    <rect x="168" y="113" width="70" height="10" rx="5" fill="#ffffff" fill-opacity="0.85"/>
+    <rect x="168" y="130" width="46" height="7" rx="3.5" fill="#ffffff" fill-opacity="0.55"/>
+    <circle class="blink" cx="272" cy="118" r="5" fill="#9FFCEF"/>
+    <rect x="168" y="155" width="114" height="16" rx="4" fill="#0B2044" fill-opacity="0.18"/>
+    <rect x="168" y="155" width="70" height="16" rx="4" fill="#0B2044" fill-opacity="0.28"/>
+  </g>
+
+  <!-- USB drive -->
+  <g class="float-b">
+    <rect x="72" y="150" width="66" height="30" rx="6" fill="url(#stGrad2)"/>
+    <rect x="118" y="158" width="20" height="14" rx="3" fill="#0B2044"/>
+    <rect x="60" y="156" width="16" height="18" rx="3" fill="#22D3C5"/>
+  </g>
+
+  <!-- Floating data chip -->
+  <g class="float-c">
+    <rect x="230" y="210" width="54" height="40" rx="8" fill="#ffffff" stroke="#14336B" stroke-width="2"/>
+    <line x1="238" y1="222" x2="276" y2="222" stroke="#14B8AA" stroke-width="3" stroke-linecap="round"/>
+    <line x1="238" y1="232" x2="266" y2="232" stroke="#CFD9E6" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
